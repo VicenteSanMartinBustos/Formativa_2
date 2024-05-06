@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios</title>
+    <link rel="stylesheet" href="css/nuestrosServicios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-body-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><i class="bi bi-cloud"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="quienesSomos.html">¿Quiénes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nuestrosServicios.html">Nuestros servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="clima.html">Consulta el Clima </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactanos.html">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="./img/monteTarn.jpg" class="img-fluid" alt="Monte Tarn">
+                        </div>
+                        <div class="col-md-8">
+                            <h2>Monte Tarn:</h2>
+                            <p>El Monte Tarn es una pequeña montaña ubicada en la parte más al sur del Estrecho de Magallanes, en la península de Brunswick, a unos 70 km al sur de Punta Arenas, Chile. Se encuentra en el extremo sur de Chile continental muy cerca del Cabo Froward, rodeada de lugares históricos como Fuerte Bulnes y Puerto del Hambre. </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="./img/parrillar.jpg" class="img-fluid" alt="Monte Tarn">
+                        </div>
+                        <div class="col-md-8">
+                            <h2>Parrillar:</h2>
+                            <p>La Reserva Nacional Laguna Parrillar es un recinto de patrimonio forestal de Chile que se encuentra bajo la protección de la Conaf (Corporación Nacional Forestal). Se encuentra ubicada en la Región de Magallanes y de la Antártica Chilena, a unos 52 km al sur de la comuna de Punta Arenas aproximadamente.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="./img/zapador.jpg" class="img-fluid" alt="Monte Tarn">
+                        </div>
+                        <div class="col-md-8">
+                            <h2>Mirador Zapador:</h2>
+                            <p>El Mirador Zapador Austral ofrece una experiencia única para aquellos que buscan conectar con la majestuosidad de la naturaleza en el extremo sur del continente americano. Situado en una posición privilegiada, este mirador ofrece vistas panorámicas impresionantes que se extienden hacia el horizonte infinito del océano Pacífico. Desde sus alturas, los visitantes pueden contemplar la inmensidad de los glaciares, los picos nevados y los imponentes fiordos que caracterizan la región austral de Chile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 style="color: red; font-weight: bold;" class="text-center">PRECIOS:</h4>
+    <ol class="list-group list-group-numbered">
+        <li class="list-group-item text-center">Monte tarn x persona: $19.990 (duracion 4hrs)</li>
+        <li class="list-group-item text-center">Parrillar x persona: $14.990 (duracion 2-3 hrs)</li>
+        <li class="list-group-item text-center">Mirador Zapador x persona: $14.990 (duracion 3hrs)</li>
+      </ol>
+
+      <h4 style="color: red; font-weight: bold;" class="text-center mapa">MAPA DE LA ZONA (en orden monte tarn, parrillar y mirador zapador):</h4>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUOUKJ5kAxITCwBrsO4bGR5DYS-ZGjk2o"></script>
+
+      <div id="map" style="height: 400px; width: 100%;"></div>
+      <script>
+        $(document).ready(function() {
+   
+    var chile = { lat: -52.99811111, lng: -70.97638889 };
+
+  
+    var mapOptions = {
+        center: chile,
+        zoom: 10, // Puedes ajustar el nivel de zoom según tu preferencia
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    // Inicializar el mapa
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+
+    var marker = new google.maps.Marker({
+        position: chile,
+        map: map,
+        title: "Santiago, Chile"
+    });
+});
+
+      </script>
+
+<div id="map2" style="height: 400px; width: 100%;"></div>
+<script>
+  $(document).ready(function() {
+
+var chile = { lat: -53.36611111, lng: -71.35638889 };
+
+
+var mapOptions = {
+  center: chile,
+  zoom: 10, // Puedes ajustar el nivel de zoom según tu preferencia
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+
+// Inicializar el mapa
+var map = new google.maps.Map(document.getElementById("map2"), mapOptions);
+
+
+var marker = new google.maps.Marker({
+  position: chile,
+  map: map,
+  title: "Santiago, Chile"
+});
+});
+
+</script>
+
+<div id="map3" style="height: 400px; width: 100%;"></div>
+<script>
+  $(document).ready(function() {
+
+var chile = { lat: -53.15269160415932, lng: -71.02747854838456  };
+
+
+var mapOptions = {
+  center: chile,
+  zoom: 10, // Puedes ajustar el nivel de zoom según tu preferencia
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+
+// Inicializar el mapa
+var map = new google.maps.Map(document.getElementById("map3"), mapOptions);
+
+
+var marker = new google.maps.Marker({
+  position: chile,
+  map: map,
+  title: "Santiago, Chile"
+});
+});
+
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
